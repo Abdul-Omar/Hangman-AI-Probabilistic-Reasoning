@@ -3,8 +3,6 @@
 
         probab_dict = {}  # hold prob each word is a viable option
 
-        # frequencies of all the words from file=> stuff we calculated in the previous step step 1
-        frequency = self.calculateFrequencies()
         for word in frequency.keys():
             matched = True;
             for i in range(len(word)):
@@ -19,7 +17,7 @@
 
             if matched:
 
-                probab_dict[word] = 1 * frequency[word]
+                probab_dict[word] = 1 * frequencies[word]
             else:
 
                 probab_dict[word] = 0
