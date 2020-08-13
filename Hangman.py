@@ -64,7 +64,7 @@ class hangman:
 
             probab_dict = calculate_posterior_probability(mystery, guess_list, frequencies)
 
-            letter_probab = predictiveCalculate( mystery, guess_list,probab_dict)  # get the probabilities
+            letter_probab = predict_next_letter( mystery, guess_list,probab_dict)  # get the probabilities
 
 
             sorted_letter_probabs = []
@@ -82,7 +82,8 @@ class hangman:
             for i in range(0, len(mystery)):
                 if secret_word[i] == nextLetter:
                     mystery[i] = secret_word[i]
-                if mystery[i] == "?":                missingLetters += 1
+                if mystery[i] == "?": 
+                    missingLetters += 1
             gameOver = missingLetters <= 0
         print("Game over. It took {0} guesses to get the word {1}.".format(guessCount, secret_word))
 
