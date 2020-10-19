@@ -1,5 +1,5 @@
-   # calculates the probability of each letter to be the next letter
     def predict_next_letter(mystery, guess_list,probab_dict):
+      """ calculates the probability of each letter to be the next letter"""
 
         alphabet = list(string.ascii_uppercase);
 
